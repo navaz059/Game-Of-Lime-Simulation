@@ -1,0 +1,40 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Game of Life Simulator</title>
+ </head>
+ <body>
+    <h1>Game Of life</h1>
+ </body>   
+<div id="lol">
+    <button id=start>Start </button>
+    <button id=pause>Pause </button>
+    <button id=rand>random </button><br>
+    <canvas id="canvasElement" width=1250 height=500 style="border:3px solid black" color = white></canvas><br>
+    <button id=clear>Clear</button>
+</div>
+
+
+
+<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+    $('#rand').click(function(){
+       buildRandomData('1000');
+    })
+    $('#start').click(function(){
+       continueGame = true;
+       playGame();
+    })
+    $('#pause').click(function(){
+       continueGame = false;
+    })
+
+    $('#clear').click(function(){
+       clear(); 
+    });
+
+</script>
+
+<script type="text/javascript" charset="utf-8" src="life.js"></script>
+</html>
